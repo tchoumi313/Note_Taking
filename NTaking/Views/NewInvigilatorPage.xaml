@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NTaking.Views.NewInvigilatorPage"
+             >
+    <ContentPage.Content>
+        <Grid>
+            <Frame HorizontalOptions="CenterAndExpand" 
+                   VerticalOptions="StartAndExpand"
+                   HasShadow="True"
+                   CornerRadius="25"
+                   Margin="0,20,0,0"
+                   HeightRequest="470"
+                   WidthRequest="250">
+                <StackLayout>
+                    <Label 
+                        TextColor="LightGreen"
+                        HorizontalOptions="Center"
+                        FontSize="28"
+                        Text ="INVIGILATOR"
+                           />
+
+                    <Frame BackgroundColor="Transparent" 
+                       BorderColor="LightGreen" 
+                       Padding="0" 
+                       Margin="0" 
+                       CornerRadius="50" 
+                       HorizontalOptions="FillAndExpand">
+                        <StackLayout Orientation="Horizontal">
+                            <Frame BackgroundColor="AliceBlue" 
+                               CornerRadius="50" 
+                               HeightRequest="35" 
+                               WidthRequest="35"
+                               HorizontalOptions="Start"
+                               Padding="0"  
+                               Margin="7">
+
+                            </Frame>
+                            <Entry Placeholder="FirstName"
+                               Text="{Binding FirstName}"
+                                           TextColor="Black" 
+                                           HorizontalOptions="FillAndExpand"
+                                           Margin="0,0,15,0"/>
+                        </StackLayout>
+                    </Frame>
+
+                    <Frame BackgroundColor="Transparent" 
+                       BorderColor="LightGreen" 
+                       Padding="0" 
+                       Margin="0" 
+                       CornerRadius="50" 
+                       HorizontalOptions="FillAndExpand">
+                        <StackLayout Orientation="Horizontal">
+                            <Frame BackgroundColor="AliceBlue" 
+                               CornerRadius="50" 
+                               HeightRequest="35" 
+                               WidthRequest="35"
+                               HorizontalOptions="Start"
+                               Padding="0"  
+                               Margin="7">
+
+                            </Frame>
+                            <Entry Placeholder="Second Name" 
+                               Text="{Binding SecondName}"
+                                           TextColor="Black" 
+                                           HorizontalOptions="FillAndExpand"
+                                           Margin="0,0,15,0"/>
+                        </StackLayout>
+                    </Frame>
+
+                    <Frame BackgroundColor="Transparent" 
+                       BorderColor="LightGreen" 
+                       Padding="0" 
+                       Margin="0" 
+                       CornerRadius="50" 
+                       HorizontalOptions="FillAndExpand">
+                        <StackLayout Orientation="Horizontal">
+                            <Frame BackgroundColor="AliceBlue" 
+                               CornerRadius="50" 
+                               HeightRequest="35" 
+                               WidthRequest="35"
+                               HorizontalOptions="Start"
+                               Padding="0"  
+                               Margin="7">
+
+                            </Frame>
+                            <Entry Placeholder="Room Number" 
+                               Text="{Binding RoomNumber}"
+                                           TextColor="Black" 
+                                           HorizontalOptions="FillAndExpand"
+                                           Margin="0,0,15,0"/>
+                        </StackLayout>
+                    </Frame>
+
+                    <Frame BackgroundColor="Transparent" 
+                       BorderColor="LightGreen" 
+                       Padding="0" 
+                       Margin="0" 
+                       CornerRadius="50" 
+                       HorizontalOptions="FillAndExpand">
+                        <StackLayout Orientation="Horizontal">
+                            <Frame BackgroundColor="AliceBlue" 
+                               CornerRadius="50" 
+                               HeightRequest="35" 
+                               WidthRequest="35"
+                               HorizontalOptions="Start"
+                               Padding="0"  
+                               Margin="7">
+
+                            </Frame>
+                            <Entry Placeholder="Function" 
+                               Text="{Binding Function}"
+                                           TextColor="Black" 
+                                           HorizontalOptions="FillAndExpand"
+                                           Margin="0,0,15,0"/>
+                        </StackLayout>
+                    </Frame>
+
+                    <Frame BackgroundColor="Transparent" 
+                       BorderColor="LightGreen" 
+                       Padding="0" 
+                       Margin="0" 
+                       CornerRadius="50" 
+                       HorizontalOptions="FillAndExpand">
+                        <StackLayout Orientation="Horizontal">
+                            <Frame BackgroundColor="AliceBlue" 
+                               CornerRadius="50" 
+                               HeightRequest="35" 
+                               WidthRequest="35"
+                               HorizontalOptions="Start"
+                               Padding="0"  
+                               Margin="7">
+
+                            </Frame>
+                            <Entry Placeholder="Phone Number"
+                               Text="{Binding PhoneNumber}"
+                                           TextColor="Black" 
+                                           HorizontalOptions="FillAndExpand"
+                                           Margin="0,0,15,0"/>
+                        </StackLayout>
+                    </Frame>
+
+                    <Frame BackgroundColor="Transparent" 
+                       BorderColor="LightGreen" 
+                       Padding="0"
+                       HeightRequest="110"
+                       Margin="0" 
+                       CornerRadius="25" 
+                       HorizontalOptions="FillAndExpand">
+                        <StackLayout Orientation="Horizontal">
+                            <Frame BackgroundColor="AliceBlue" 
+                               CornerRadius="50" 
+                               HeightRequest="35" 
+                               WidthRequest="35"
+                               HorizontalOptions="Start"
+                               Padding="0"  
+                               Margin="7">
+
+                            </Frame>
+                            <Editor Placeholder="Observation" 
+                               Text="{Binding Observation}"
+                                           TextColor="Black" 
+                                           HorizontalOptions="FillAndExpand"
+                                           Margin="0,0,15,0"/>
+                        </StackLayout>
+                    </Frame>
+
+                    <Frame BackgroundColor="Transparent" 
+                        
+                       Padding="0" 
+                       Margin="0,10,0,0" 
+                       CornerRadius="50" 
+                       HorizontalOptions="FillAndExpand">
+                        <Grid ColumnDefinitions="*,*" >
+                            <Button 
+                            CornerRadius="50"
+                            Text="Save"
+                             Clicked="OnCreateButtonClicked"   
+                            BackgroundColor="LightGreen"/>
+
+                            <Button
+                            CornerRadius="50"
+                            Grid.Column="1"
+                            Text="Delete"
+                             Clicked="OnDeleteButtonClicked"   
+                            BackgroundColor="LightGreen"/>
+                        </Grid>
+                    </Frame>
+
+                </StackLayout>
+            </Frame>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

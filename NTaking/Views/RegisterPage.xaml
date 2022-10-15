@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NTaking.Views.RegisterPage"
+             Title="Register"
+             Shell.FlyoutBehavior="Disabled"
+             Shell.TabBarIsVisible="False"
+             >
+    <ContentPage.Content>
+        <Grid>
+            <StackLayout Padding="0" Margin="0">
+                <Frame HeightRequest="30" HorizontalOptions="FillAndExpand">
+                    <Frame.Background>
+                        <LinearGradientBrush EndPoint="1,0">
+                            <GradientStop Color="LightGreen" Offset="0.1"/>
+                            <GradientStop Color="DarkGreen" Offset="1.0"/>
+                        </LinearGradientBrush>
+                    </Frame.Background>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand">
+                        <Shell.BackButtonBehavior>
+                            <BackButtonBehavior TextOverride="Go Back"/>
+                        </Shell.BackButtonBehavior>
+                        <Label Text="New User" 
+                               TextColor="Black" 
+                               FontSize="Large" 
+                               FontAttributes="Bold" 
+                               HorizontalOptions="End" />
+
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+
+            <StackLayout Padding="0,20,0,0" Margin="0,60,15,0">
+
+                <Frame BackgroundColor="Transparent" 
+                       BorderColor="DarkGray" 
+                       Padding="0" 
+                       Margin="0" 
+                       CornerRadius="50" 
+                       HorizontalOptions="FillAndExpand">
+                    <StackLayout Orientation="Horizontal">
+                        <Frame BackgroundColor="AliceBlue" 
+                               CornerRadius="50" 
+                               HeightRequest="35" 
+                               WidthRequest="35"
+                               HorizontalOptions="Start"
+                               Padding="0"  
+                               Margin="7">
+
+                        </Frame>
+                        <Entry Placeholder="FirstName" 
+                                           TextColor="Black" 
+                                           HorizontalOptions="FillAndExpand"
+                                           Margin="0,0,15,0"/>
+                    </StackLayout>
+                </Frame>
+
+                <Frame BackgroundColor="Transparent" 
+                       BorderColor="DarkGray" 
+                       Padding="0" 
+                       Margin="0" 
+                       CornerRadius="50" 
+                       HorizontalOptions="FillAndExpand">
+                    <StackLayout Orientation="Horizontal">
+                        <Frame BackgroundColor="AliceBlue" 
+                               CornerRadius="50" 
+                               HeightRequest="35" 
+                               WidthRequest="35"
+                               HorizontalOptions="Start"
+                               Padding="0"  
+                               Margin="7">
+
+                        </Frame>
+                        <Entry Placeholder="Password" 
+                                           TextColor="Black" 
+                                           HorizontalOptions="FillAndExpand"
+                                           Margin="0,0,15,0"/>
+                    </StackLayout>
+                </Frame>
+
+                <Frame BackgroundColor="Transparent" 
+                       BorderColor="DarkGray" 
+                       Padding="0" 
+                       Margin="0" 
+                       CornerRadius="50" 
+                       HorizontalOptions="FillAndExpand">
+                    <StackLayout Orientation="Horizontal">
+                        <Frame BackgroundColor="AliceBlue" 
+                               CornerRadius="50" 
+                               HeightRequest="35" 
+                               WidthRequest="35"
+                               HorizontalOptions="Start"
+                               Padding="0"  
+                               Margin="7">
+
+                        </Frame>
+                        <Entry Placeholder="Confirm Password" 
+                                           TextColor="Black" 
+                                           HorizontalOptions="FillAndExpand"
+                                           Margin="0,0,15,0"/>
+                    </StackLayout>
+                </Frame>
+
+                <Frame BackgroundColor="Transparent" 
+                       BorderColor="DarkGray" 
+                       Padding="0" 
+                       Margin="0" 
+                       CornerRadius="50" 
+                       HorizontalOptions="FillAndExpand">
+                    <StackLayout >
+                        <Button Text="Sign Up"
+                            BackgroundColor="LightGreen"
+                               Clicked="OnSignUpClicked"/>
+                    </StackLayout>
+                </Frame>
+
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

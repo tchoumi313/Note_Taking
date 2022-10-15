@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NTaking.Views.LoginPage"
+             Shell.FlyoutBehavior="Disabled"
+             Shell.TabBarIsVisible="False"
+             Shell.NavBarIsVisible="False"
+             >
+    <StackLayout Padding="0" BackgroundColor="Transparent">
+        <Grid>
+            <StackLayout Padding="0" Margin="0">
+                <Frame HeightRequest="200" HorizontalOptions="FillAndExpand">
+                    <Frame.Background>
+                        <LinearGradientBrush EndPoint="1,0">
+                            <GradientStop Color="LightGreen" Offset="0.1"/>
+                            <GradientStop Color="DarkGreen" Offset="1.0"/>
+                        </LinearGradientBrush>
+                    </Frame.Background>
+                    <StackLayout>
+
+                        <Frame CornerRadius="40" BackgroundColor="LightGreen" HeightRequest="50" WidthRequest="70" HorizontalOptions="Center">
+                            <Label  Text="Note Taking" TextColor="Black" FontSize="Large" FontAttributes="Bold" HorizontalOptions="Center" />
+                        </Frame>
+
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+
+            <StackLayout Margin="15,160,15,0" >
+                <Frame BackgroundColor="white" BorderColor="DarkGray"  CornerRadius="25" HasShadow="True" HeightRequest="450" HorizontalOptions="FillAndExpand">
+                    <StackLayout>
+                        <StackLayout HorizontalOptions="CenterAndExpand">
+                            <Label Text="SIGN IN" TextColor="Black" FontSize="Medium" FontAttributes="Bold"/>
+                        </StackLayout>
+
+                        <StackLayout Margin="0,25,0,0">
+                            <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" Margin="0" CornerRadius="50" HorizontalOptions="FillAndExpand">
+                                <StackLayout Orientation="Horizontal">
+                                    <Frame BackgroundColor="AliceBlue" CornerRadius="50" 
+                                           HeightRequest="35" 
+                                           WidthRequest="35"
+                                           HorizontalOptions="Start"
+                                           Padding="0"  
+                                           Margin="7">
+
+                                    </Frame>
+                                    <Entry Placeholder="Name" 
+                                           TextColor="Black" 
+                                           HorizontalOptions="FillAndExpand"
+                                           Margin="0,0,15,0"/>
+                                </StackLayout>
+                            </Frame>
+
+                            <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" Margin="0,15,0,0" CornerRadius="50" HorizontalOptions="FillAndExpand">
+                                <StackLayout Orientation="Horizontal">
+                                    <Frame BackgroundColor="AliceBlue" CornerRadius="50" 
+                                           HeightRequest="35" 
+                                           WidthRequest="35"
+                                           HorizontalOptions="Start"
+                                           Padding="0"  
+                                           Margin="7">
+
+                                    </Frame>
+                                    <Entry Placeholder="Password"
+                                           IsPassword="True"
+                                           TextColor="Black" 
+                                           HorizontalOptions="FillAndExpand"
+                                           Margin="0,0,15,0"/>
+                                </StackLayout>
+                            </Frame>
+
+                        </StackLayout>
+
+                        <StackLayout Orientation="Horizontal">
+                            <CheckBox IsChecked="False" Color="LightGreen"/>
+                            <Label Text="Remember me" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+
+                            <Label Text="Forgot Password?" HorizontalTextAlignment="End" TextColor="Green" HorizontalOptions="EndAndExpand" VerticalTextAlignment="Center"/>
+                        </StackLayout>
+
+                        <Button
+                            Command="{Binding LoginCommand}"
+                            Text="Sign IN" BackgroundColor="LightGreen" TextColor="Black" FontAttributes="Bold" CornerRadius="25"/>
+
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                            <Label Text="Still not connected?" HorizontalTextAlignment="End" HorizontalOptions="Center" VerticalTextAlignment="Center"/>
+                            <Button Clicked="OnSignUpClickedAsync" BorderColor="Transparent"  BackgroundColor="Transparent" BorderWidth="0" FontSize="12" Padding="0,2,1,0" Margin="0" Text="Sign Up?" TextColor="Green" HorizontalOptions="Center" HeightRequest="30" WidthRequest="54"/>
+                        </StackLayout>
+
+                        <Grid>
+                            <BoxView BackgroundColor="DarkGray" HeightRequest="1" HorizontalOptions="CenterAndExpand" WidthRequest="100" Margin="30"/>
+                            <Frame BackgroundColor="White" BorderColor="DarkGray" WidthRequest="30" Padding="0" Margin="0" HeightRequest="30" VerticalOptions="Center" HorizontalOptions="Center" CornerRadius="50">
+                                <Label Text="OR" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" HorizontalOptions="Center"/>
+                            </Frame>
+                        </Grid>
+
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                            <Frame BackgroundColor="SkyBlue" BorderColor="DarkGray" WidthRequest="70" Padding="0" Margin="0" HeightRequest="30" VerticalOptions="Center" HorizontalOptions="Center" CornerRadius="50">
+                                <Label Text="Facebook" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" HorizontalOptions="Center"/>
+                            </Frame>
+
+                            <Frame BackgroundColor="IndianRed" BorderColor="DarkGray" WidthRequest="60" Padding="0" Margin="0" HeightRequest="30" VerticalOptions="Center" HorizontalOptions="Center" CornerRadius="50">
+                                <Label Text="Google" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" HorizontalOptions="Center"/>
+                            </Frame>
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+        </Grid>
+    </StackLayout>
+</ContentPage>

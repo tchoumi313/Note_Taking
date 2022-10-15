@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NTaking.Views.BestInvigilatorPage"
+             Title="Best Invigilator">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Export" 
+                     Clicked="OnExportClicked"
+                     />
+        </ContentPage.ToolbarItems>
+        <StackLayout>
+
+
+            <CollectionView x:Name="SessionsColView"
+                            Margin="15"
+                            SelectionMode="Single"
+                            SelectionChanged="OnSelectionChanged">
+
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Vertical"
+                                       ItemSpacing="10"/>
+                </CollectionView.ItemsLayout>
+
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame HasShadow="True"
+                           HeightRequest="35"
+                           WidthRequest="300"
+                           BorderColor="LightGreen"
+                           CornerRadius="10">
+                            <StackLayout Orientation="Horizontal" VerticalOptions="Start" HorizontalOptions="Start">
+                                <Frame BackgroundColor="AliceBlue" CornerRadius="25" 
+                                           HeightRequest="35" 
+                                           WidthRequest="35"
+                                           HorizontalOptions="Start"
+                                           Padding="0"  
+                                           Margin="0,0,7,0">
+                                    <Label Text="{Binding RoomNumber}"
+                                   HorizontalOptions="Center"
+                                   VerticalOptions="Center"
+                                           TextColor="Black"
+                                           FontSize="Medium"/>
+
+                                </Frame>
+                                <StackLayout>
+                                    <Label Text="{Binding FirstName}"
+                                   FontSize="Medium"
+                                   TextColor="Black"/>
+
+                                    <Label Text="{Binding SecondName}"
+                                   FontSize="Small"
+                                   TextColor="Silver"/>
+                                </StackLayout>
+
+                            </StackLayout>
+                        </Frame>
+
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+
+            </CollectionView>
+        </StackLayout>
+    
+</ContentPage>

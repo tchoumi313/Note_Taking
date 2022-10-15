@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NTaking.Views.AboutPage"
+             xmlns:vm="clr-namespace:NTaking.ViewModels"
+             Title="How Does It Work!">
+    
+    
+    
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Accent">#96d1ff</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        
+        
+            
+            
+            <StackLayout BackgroundColor="GhostWhite" VerticalOptions="FillAndExpand" HorizontalOptions="Fill">
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+                    <ContentView Padding="0" VerticalOptions="FillAndExpand">
+                        <Image Source="splash.png" VerticalOptions="Center" HeightRequest="250" />
+                    </ContentView>
+                </StackLayout>
+            </StackLayout>
+            <ScrollView Grid.Row="1">
+
+                <StackLayout Orientation="Vertical" Padding="30,0,30,24" Spacing="10">
+                <Label Text="Start taking note easily!" FontSize="Title" TextDecorations="Underline" FontAttributes="Bold"/>
+                <Label 
+                    Text="This application is to take note of invigilators during Driving Licence Exam Sessions."  FontSize="18" Padding="0,0,0,0"/>
+                <Label Text="To do so:"  FontSize="18" Padding="0,0,0,0"/>
+                <Label Text="1 => Go to hit on the 'TOP LEFT CORNER' and then choose 'Sessions'."  FontSize="18" Padding="0,0,0,0"/>
+                <Label Text="2 => Create a new session by touching the 'RIGHT TOP ICON', fill in the name and choose the date then save. "  FontSize="18" Padding="0,0,0,0"/>
+                <Label Text="3 =>Touch the created session and choose add invigilator.Notice that you can change/delete a session. "  FontSize="18" Padding="0,0,0,0"/>
+                <Label Text="4 => create 'invigilators' just like it was done for 'sessions'."  FontSize="18" Padding="0,0,0,0"/>
+                <Label Text="5 => On a session! you can get the list of best invigilators (invigilators with Observation starting with *Bien*) and export the list to an excel file, or you can just export all invigilators of the session to an Excel file for further used." FontSize="18" Padding="0,0,0,0"/>
+                <Label FontSize="16" Padding="0,5,0,0" HorizontalOptions="Center" VerticalOptions="Center">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <FormattedString.Spans>
+                                <Span Text="For any difficulty Contact me"/>
+                                
+                            </FormattedString.Spans>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Grid HorizontalOptions="Center">
+                    <BoxView BackgroundColor="DarkGray" HeightRequest="1" HorizontalOptions="CenterAndExpand" WidthRequest="100" Margin="15"/>
+                    <Frame BackgroundColor="White" BorderColor="DarkGray" WidthRequest="30" Padding="0" Margin="0" HeightRequest="30" VerticalOptions="Center" HorizontalOptions="Center" CornerRadius="50">
+                        <Label Text="AT" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" HorizontalOptions="Center"/>
+                    </Frame>
+                </Grid>
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                    <!--<Frame BackgroundColor="DeepSkyBlue" BorderColor="DarkGray" WidthRequest="100" Padding="0" Margin="0" HeightRequest="25" VerticalOptions="Center" HorizontalOptions="Center" CornerRadius="50">
+                        <Button Text="Facebook" BackgroundColor="Transparent"  HorizontalOptions="FillAndExpand" Clicked="FaceBookButton_Clicked" Padding="2"/> 
+                    </Frame>-->
+
+                    <Frame BackgroundColor="IndianRed" BorderColor="DarkGray" WidthRequest="100" Padding="0" Margin="0" HeightRequest="25" VerticalOptions="Center" HorizontalOptions="Center" CornerRadius="50">
+                        <Button Text="Google" BackgroundColor="Transparent"  HorizontalOptions="FillAndExpand" Clicked="GoogleButton_Clicked" Padding="2"/>
+                    </Frame>
+
+                    <Frame BackgroundColor="ForestGreen" BorderColor="DarkGray" WidthRequest="100" Padding="0" Margin="0" HeightRequest="25" VerticalOptions="Center" HorizontalOptions="Center" CornerRadius="50">
+                        <Button Text="WhatsApp" BackgroundColor="Transparent" HorizontalOptions="FillAndExpand" Clicked="WhatsAppButton_Clicked" Padding="2"/>
+                    </Frame>
+                </StackLayout>
+
+            </StackLayout>
+                
+           
+            
+
+
+        </ScrollView>
+    </Grid>
+
+</ContentPage>
